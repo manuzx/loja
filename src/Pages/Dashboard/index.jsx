@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import carros from '../../mocks/listaCarros';
 import './style.css';
 
@@ -32,7 +33,9 @@ export default function Dashboard() {
                             <p>Diária: </p>
                             <p> {carro.diaria}</p>
                         </div>
-                        <button>Alugar</button>
+                        <Link to={`/carro/${carro.id}`}>
+                            <button>Alugar</button>
+                        </Link>
                     </div>
                 </div>
             )
